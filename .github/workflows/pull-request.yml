@@ -13,16 +13,7 @@ jobs:
     
     - uses: actions/setup-python@v1
       with:
-        python-version: 3.8
-    
-    - name: flake8 and pylint
-      run: |
-        pip install -r requirements.txt
-        flake8 --ignore=E501,E231 tests/*.py
-        pylint --errors-only --disable=C0301 --disable=C0326 tests/*.py
-    
-    - name: unit test
-      run: python -m unittest --verbose --failfast
+        python-version: 3.9
   
   merge:
     if: github.actor == 'nke680'
