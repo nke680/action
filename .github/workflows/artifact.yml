@@ -1,6 +1,6 @@
 name: artifact
 
-on: [push]
+on: delete
 
 env:
   FILE_NAME: hello-server
