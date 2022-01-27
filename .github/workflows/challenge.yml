@@ -7,14 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Easy Zip Files
-      uses: vimtor/action-zip@v1
-      with:
-        files: /
-        recursive: true
-        dest: ${{ env.FILE_NAME }}
+    # - name: Easy Zip Files
+    #   uses: vimtor/action-zip@v1
+    #   with:
+    #     files: /
+    #     recursive: true
+    #     dest: ${{ env.FILE_NAME }}
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: zipped-up
-        path: ./${{ env.FILE_NAME }}
+        name: ${{ env.FILE_NAME }}
+        path: .
