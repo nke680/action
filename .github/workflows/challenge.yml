@@ -1,0 +1,19 @@
+name: CP03 Challenge
+on: push
+env:
+  FILE_NAME: test.zip
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: papeloto/action-zip@v1
+      with:
+        files: /
+        recursive: true
+        dest: ${{ env.FILE_NAME }}
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: zipped-up
+        path: ./${{ env.FILE_NAME }}
