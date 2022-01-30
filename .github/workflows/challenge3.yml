@@ -1,5 +1,4 @@
 name: CP05 Challenge
-
 on: [push]
 jobs:
   build:
