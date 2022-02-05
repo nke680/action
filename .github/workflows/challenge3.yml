@@ -2,7 +2,7 @@ name: CP05 Challenge
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macos]
     steps:
     - uses: actions/checkout@v2
     - uses: nke680/keyword-release-action@hello
